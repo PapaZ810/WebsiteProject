@@ -54,17 +54,23 @@ public class InternetDetailViewController: UIViewController
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateView()
     }
     
     private func loadURL(webAddress: String) -> Void
     {
-        
+        let currentURL = URL(string: webAddress)
+        let currentWebRequest = URLRequest(url: currentURL!)
+        webViewer.load(currentWebRequest)
     }
     
     private func loadPDF() -> Void
     {
-        
+        if let contentPDF = Bundle.main.url(forResource: "Abstractions", withExtension: "pdf", subdirectory: nil, localization: nil)
+        {
+            let requestedPDF = NSURLRequest(url: contentPDF)
+            webViewer.load(requestedPDF as URLRequest)
+        }
     }
     
     

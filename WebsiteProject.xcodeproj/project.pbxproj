@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CD25049B21C1AC2300783409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25049A21C1AC2300783409 /* AppDelegate.swift */; };
-		CD25049D21C1AC2300783409 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25049C21C1AC2300783409 /* ViewController.swift */; };
 		CD2504A021C1AC2300783409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD25049E21C1AC2300783409 /* Main.storyboard */; };
 		CD2504A221C1AC3700783409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2504A121C1AC3700783409 /* Assets.xcassets */; };
 		CD2504A521C1AC3700783409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2504A321C1AC3700783409 /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		CD25049721C1AC2300783409 /* WebsiteProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebsiteProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD25049A21C1AC2300783409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD25049C21C1AC2300783409 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD25049F21C1AC2300783409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD2504A121C1AC3700783409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD2504A421C1AC3700783409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		CD2504AE21C1ACAC00783409 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CD25049C21C1AC2300783409 /* ViewController.swift */,
 				CDC2198E21C43DF4002AB6C2 /* InternetDetailViewController.swift */,
 			);
 			path = Controller;
@@ -162,7 +159,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD25049D21C1AC2300783409 /* ViewController.swift in Sources */,
 				CDC2198F21C43DF4002AB6C2 /* InternetDetailViewController.swift in Sources */,
 				CD25049B21C1AC2300783409 /* AppDelegate.swift in Sources */,
 			);
