@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwT-MW-jkb">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,15 +9,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Internet Detail View Controller-->
         <scene sceneID="c76-yl-sZm">
             <objects>
-                <viewController id="d9j-ju-KEz" sceneMemberID="viewController">
+                <viewController id="d9j-ju-KEz" customClass="InternetDetailViewController" customModule="WebsiteProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xG1-Vs-xJD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-D6-9hd">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-D6-9hd">
                                 <rect key="frame" x="0.0" y="363" width="414" height="373"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -25,9 +25,11 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLI-rU-jdh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLI-rU-jdh">
                                 <rect key="frame" x="20" y="73" width="374" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="11K-3k-3H6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,11 +37,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HOP-D6-9hd" firstAttribute="width" secondItem="aed-QC-7z9" secondAttribute="width" id="kZW-lm-zil"/>
+                            <constraint firstItem="HOP-D6-9hd" firstAttribute="bottom" secondItem="aed-QC-7z9" secondAttribute="bottom" id="38F-rL-GVl"/>
+                            <constraint firstAttribute="trailing" secondItem="HOP-D6-9hd" secondAttribute="trailing" id="7dN-xa-cxN"/>
+                            <constraint firstItem="SLI-rU-jdh" firstAttribute="leading" secondItem="xG1-Vs-xJD" secondAttribute="leadingMargin" id="CRC-j3-RhR"/>
+                            <constraint firstItem="HOP-D6-9hd" firstAttribute="top" secondItem="SLI-rU-jdh" secondAttribute="bottom" constant="92" id="FlK-TO-nqS"/>
+                            <constraint firstItem="SLI-rU-jdh" firstAttribute="centerX" secondItem="HOP-D6-9hd" secondAttribute="centerX" id="L9C-t6-cPG"/>
+                            <constraint firstItem="SLI-rU-jdh" firstAttribute="top" secondItem="aed-QC-7z9" secondAttribute="top" constant="9" id="PXf-HX-kOD"/>
+                            <constraint firstItem="HOP-D6-9hd" firstAttribute="leading" secondItem="xG1-Vs-xJD" secondAttribute="leading" id="hjf-8n-2XP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aed-QC-7z9"/>
                     </view>
                     <navigationItem key="navigationItem" id="tCT-LZ-81t"/>
+                    <connections>
+                        <outlet property="screenTitle" destination="SLI-rU-jdh" id="eqd-Oe-dHP"/>
+                        <outlet property="webViewer" destination="HOP-D6-9hd" id="3sx-b0-uPF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daY-F1-Atv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +60,7 @@
         <!--Root View Controller-->
         <scene sceneID="LEs-do-HCe">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="LYG-9u-Xgx" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Cell" clearsSelectionOnViewWillAppear="NO" id="LYG-9u-Xgx" customClass="InternetMasterViewController" customModule="WebsiteProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Kv-Ye-g9t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

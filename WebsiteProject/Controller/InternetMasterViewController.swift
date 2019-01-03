@@ -72,11 +72,11 @@ public class InternetMasterViewController: UITableViewController
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let Cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let rowText = internetTopics[indexPath.row]
-        cell.textLabel!.text = rowText
-        return cell
+        Cell.textLabel!.text = rowText
+        return Cell
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
